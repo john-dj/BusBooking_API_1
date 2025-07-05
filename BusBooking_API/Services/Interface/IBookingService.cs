@@ -1,10 +1,13 @@
-﻿using BusBooking_API.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace BusBooking_API.Services.Interface
 {
-    public interface IBookingService
+    public class IBookingService
     {
-        Task<int> CreateBookingAsync(CreateBookingRequest request, int userId);
-        Task<List<Booking>> GetBookingsByUserAsync(int userId);
+        Task<BookingResponse> BookSeatsAsync(int userId, CreateBookingRequest request);
+        Task<List<SeatLayout>> FetchSeatLayoutAsync(int scheduleId);
     }
 }
