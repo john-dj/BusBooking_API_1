@@ -3,6 +3,7 @@ using System;
 using BusBooking_API.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BusBooking_API.Migrations
 {
     [DbContext(typeof(BusBookingContext))]
-    partial class BusBookingContextModelSnapshot : ModelSnapshot
+    [Migration("20250705145536_AddNewEntities_Booking")]
+    partial class AddNewEntities_Booking
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.15");

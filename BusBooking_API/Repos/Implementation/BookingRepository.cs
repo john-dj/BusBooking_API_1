@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BusBooking_API.Models;
+using BusBooking_API.Repos.Interface;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
